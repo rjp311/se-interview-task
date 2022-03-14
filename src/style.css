@@ -200,11 +200,13 @@ main p:last-child {
   height: 100%;
   background: rgba(70, 70, 70, .5);
   backdrop-filter: blur(4px);
+  pointer-events: none;
   z-index: 10;
 }
 
 .modal.active {
   display: flex;
+  pointer-events: all;
 }
 
 .modal h3 {
