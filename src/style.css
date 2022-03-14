@@ -291,7 +291,7 @@ main p:last-child {
   }
 
   nav ul li a {
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
   }
 
   main > section > h2 {
