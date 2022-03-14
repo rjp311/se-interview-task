@@ -4,32 +4,92 @@
     <title>Youth Gala 2022 | Swim England</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
       <img src="./resources/pool.webp" alt="Swimming Pool Background">
       <section>
-        <img src="./resources/Swim_England_Logo.png" alt="Swim England Logo">
+        <a href="https://www.swimming.org/swimengland/">
+          <img src="./resources/Swim_England_Logo.png" alt="Swim England Logo">
+        </a>
         <div class="header-title">
-          <h1>Youth Gala</h1>
-          <h2>2022</h2>
+          <h1 class="has-text-blue">Youth Gala</h1>
+          <h1 class="has-text-red">2022</h1>
         </span>
       </section>
     </header>
     <nav>
       <ul>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Training</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#faqs">FAQs</a></li>
       </ul>
     </nav>
     <main>
-      
+      <section id="about">
+        <h2>Are you a swimmer aged 14-25?</h2>
+        <p>
+          Swim England are thrilled to announce a new youth gala, aimed at swimmers aged between 14 and 25, to be held later in the year.
+          This gala will be a single day event packed with a variety of races from start to finish. Details regarding races will be disclosed nearer the time.
+          All swimmers will receive a certificate of participation in celebration of their achievements at the event.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
+      <section id="register">
+        <h2>
+          Interested in competing?
+        </h2>
+        <p>
+          To enter, participants must be within the ages of 14 to 25 and be associated with a Swim England affiliated club.
+          Places are limited so early registration of interest is beneficial. We will verify your elligibility and let you know in due course!
+          If you'd like to compete, please register by clicking the button below.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div class="button" onClick="toggleModal()">Register »</div>
+      </section>
+      <section id="faqs">
+        <h2>FAQs</h2>
+        <div class="accordion">
+          <section>
+            <h3 onClick="toggleAnswer(1)">Q: Can I compete if I am exactly 14 or 25?</h3>
+            <article id="q1">
+              A: Yes! We'd be delighted for you to get involved.
+            </article>
+          </section>
+          <section>
+            <h3 onClick="toggleAnswer(2)">Q: Will there be galas accommodating other age groups at any point?</h3>
+            <article id="q2">
+              A: We encourage development in swimmers of all ages and competitions for swimmers outside of those specified for this event are always being considered.
+            </article>
+          </section>
+          <section>
+            <h3 onClick="toggleAnswer(3)">Q: My club is not Swim England affiliated. Can I still compete?</h3>
+            <article id="q3">
+              A: Unfortunately, to swim at this event you will need to be associated with a club that is Swim England affiliated.
+            </article>
+          </section>
+        </div>
+      </section>
     </main>
-    <footer>
-
-    </footer>
+    <div id="modal" class="modal">
+      <div class="modal-body">
+        <h3>
+          Register Interest?
+        </h3>
+        <form id="regForm">
+          <input type="email" placeholder="Email Address" required/>
+          <div class="modal-actions">
+            <div class="button cancel" onClick="toggleModal()">Cancel</div>
+            <div class="button" onClick="submitRegistration()">Submit »</div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
